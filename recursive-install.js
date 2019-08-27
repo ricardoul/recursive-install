@@ -23,10 +23,10 @@ function npmInstall (dir) {
   try {
     if(argv.production) {
       console.log('Installing ' + dir + '/package.json with --production option')
-      execSync('npm install --production', { cwd: dir})
+      execSync('npm ci', { cwd: dir})
     } else {
       console.log('Installing ' + dir + '/package.json')
-      execSync('npm install', { cwd: dir})
+      execSync('npm ci', { cwd: dir})
     }
     console.log('')
   } catch (err) {
